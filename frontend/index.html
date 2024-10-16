@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Prediction Approval</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Loan Prediction Approval</h1>
+        <form id="loanForm" onsubmit="event.preventDefault(); predictLoan();">
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" required>
+                    <option value="" disabled selected>Select your gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" required placeholder="Enter your age" />
+            </div>
+            <div class="form-group">
+                <label for="income">Annual Income</label>
+                <input type="number" id="income" required placeholder="Enter your annual income" />
+            </div>
+            <div class="form-group">
+                <label for="employmentStatus">Employment Status</label>
+                <select id="employmentStatus" required>
+                    <option value="" disabled selected>Select your employment status</option>
+                    <option value="Employed">Employed</option>
+                    <option value="Self-Employed">Self-Employed</option>
+                    <option value="Unemployed">Unemployed</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="creditScore">Credit Score</label>
+                <input type="number" id="creditScore" required placeholder="Enter your credit score" />
+            </div>
+            <div class="form-group">
+                <label for="loanAmount">Loan Amount</label>
+                <input type="number" id="loanAmount" required placeholder="Enter desired loan amount" />
+            </div>
+            <div class="form-group">
+                <label for="loanTerm">Loan Term (in months)</label>
+                <input type="number" id="loanTerm" required placeholder="Enter loan term in months" />
+            </div>
+            <div class="form-group">
+                <label for="propertyValue">Property Value</label>
+                <input type="number" id="propertyValue" required placeholder="Enter property value" />
+            </div>
+            <button type="submit" id="predictButton">Predict</button>
+        </form>
+        <div id="result" class="hidden">
+            <p id="predictionText"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
